@@ -1,5 +1,5 @@
-from datos import preguntar_si_no, ingresar_datos
-from ventas import calcular_total, guardar_venta, mostrar_resumen
+from cualquiera.datos import preguntar_si_no, ingresar_datos
+from cualquiera.ventas import calcular_total, guardar_venta, mostrar_resumen
 
 
 def main():

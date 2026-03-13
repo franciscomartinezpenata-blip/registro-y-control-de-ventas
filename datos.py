@@ -1,24 +1,23 @@
 def preguntar_si_no(mensaje):
 
-    respuesta = input(mensaje).lower()
+    respuesta = input(mensaje).strip().lower()
 
     while respuesta != "si" and respuesta != "no":
         print("Entrada inválida. Responda solo con 'si' o 'no'.")
-        respuesta = input(mensaje).lower()
+        respuesta = input(mensaje).strip().lower()
 
     return respuesta
 
 
 def ingresar_datos():
 
-    producto = input("Ingrese el nombre del producto: ")
+    producto = input("Ingrese el nombre del producto: ").strip()
 
     precio_valido = False
 
     while precio_valido == False:
 
-        precio_input = input("Ingrese el precio: ")
-        precio_input = precio_input.replace(",", ".")
+        precio_input = input("Ingrese el precio: ").replace(",", ".").strip()
 
         try:
             precio = float(precio_input)
@@ -36,7 +35,7 @@ def ingresar_datos():
     while cantidad_valida == False:
 
         try:
-            cantidad = int(input("Ingrese la cantidad: "))
+            cantidad = int(input("Ingrese la cantidad: ").strip())
 
             if cantidad <= 0:
                 print("La cantidad debe ser mayor que 0.")
