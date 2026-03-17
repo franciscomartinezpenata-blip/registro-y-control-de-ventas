@@ -1,10 +1,10 @@
-from cualquiera.datos import preguntar_si_no, ingresar_datos
-from cualquiera.ventas import calcular_total, guardar_venta, mostrar_resumen
+from datos import preguntar_si_no, ingresar_datos
+from ventas import calcular_total, guardar_venta, mostrar_resumen
 
 
 def main():
 
-    ventas = []
+    lista_ventas = []
 
     continuar = preguntar_si_no("¿Quiere registrar una venta? (si/no): ")
 
@@ -16,11 +16,11 @@ def main():
 
         print("Total de esta venta:", total)
 
-        guardar_venta(ventas, producto, precio, cantidad, total)
+        guardar_venta(lista_ventas, producto, precio, cantidad, total)
 
         continuar = preguntar_si_no("¿Desea registrar otra venta? (si/no): ")
 
-    mostrar_resumen(ventas)
+    mostrar_resumen(lista_ventas)
 
 
 main()
